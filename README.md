@@ -5,6 +5,7 @@ The Adafruit Trinket Rover ( https://learn.adafruit.com/trinket-powered-rover/re
 
 These wrist bands are typically available in two sizes- youth (7 in) and adult (8 in). I have only tried this with the YOUTH size. If you try this with the adult size, your mileage may vary.
 
+
 # Tiny-Tank
 
 The other part of this is that I want to make a small, cheap RC tank. 
@@ -18,7 +19,11 @@ The light sensors are your typical photoresistors that are "extended" through st
 The Eagle files uploaded are the first iteration and are still inbound, so I have not tested them.
 
 # Problems to still troubleshoot:
+
+- The continuous diameter of the drive wheel and idler cause the tank to throw track. Aaron suggested adding a bevel on the inside.
+
 - A RAW power input of 6v is enough to power the servos, but not the servos AND the Arduino Mini Pro. The code gets SUPER choppy. I can solve this by running the RAW at ~7v (5 AAAs were tested on the breadboard), but this is kind of a crappy alternative because buying a 4 battery holder AND a 1 battery holder is just a pain. I want to find a "cleaner" way to provide power to the servos and the Arduino. mayby running an Arduino Mini Pro/Trinket 3v variant?
+  >> Add a Lipo?
 
 - Definitely forgot the power switch on the board. Well, didn't forget. The goal was to run the tank off of the 4-AAA/AA packs with the build in switch. THAT was supposed to be the on/off switch. But running the 5 AAA/AA set up ruinded this.
 
