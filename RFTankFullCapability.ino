@@ -11,7 +11,6 @@
  * Last update: 20180710
  * 
  * To Do:
- * -Add potentiometer on A2
  * 
  * -Impliment fwd/back/stop vals?
  * -When you die, stay dead
@@ -46,6 +45,7 @@ int lightSensorL = A0;
 int lightSensorR = A1;
 int sensorValueL = 0;
 int sensorValueR = 0;
+int potentiometer = A3;
 
 int life = 3;
 int wait = 20;
@@ -79,6 +79,11 @@ void setup() {
 void loop() {
   while(life > 0){
     Serial.println("In the life loop!");
+
+    Serial.println("Read the trimpot:");
+    threshold = analogRead(potentiometer);
+    Serial.println(threshold);
+    
     sensorValueL = analogRead(lightSensorL);
     sensorValueR = analogRead(lightSensorR);
     Serial.println(sensorValueL);
